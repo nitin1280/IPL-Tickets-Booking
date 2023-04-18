@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Premier League 2023 </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  />
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div id="menu-bar" class="fa fa-bars"></div>
+        <a href="#" class="logo"><img src="./img/ipllogo.jpg" width="40px"><span>TATA</span>IPL</a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#book">Book</a>
+            <a href="#packages">Packages</a>
+            <a href="#Review">Review</a>
+            <a href="#gallery">Gellery</a>
+            <a href="#Review">Contact</a>
+        </nav>
+        <div class="icons">
+            <i class="fa fa-search" id="search-btn"></i>
+            <i class="fa fa-user"  id="login-btn"></i>
+            <!-- <i class="fa fa-user-plus" aria-hidden="true"></i> -->
+        </div>
+        <form action="#packages" class="search-bar-container" onkeyup="myFunction()" id="MyList">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fa fa-search"></label>
+        </form>
+    </header>
+   
+
+<!--login Form-container-->
+
+<div class="login-form-container">
+    <i class="fa fa-times" id="form-close"></i>
+    <form onsubmit="return validate()" action="index.html">
+        <h3>login</h3>
+        <input id="Email" type="email" class="box"  placeholder="enter your email">
+        <input id="pass" type="password" class="box" placeholder="enter your password">
+        <input type="submit" value="login now" class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password? <a href="#">click here</a></p>
+        <p>don't have and account? <a href="login.html">register now</a></p>
+    </form>
+</div>
+
+<!--Home section start-->
+<section class="home" id="home">
+    <div class="content">
+        <h3> Believe in your team, and they can achieve anything </h3>
+        <p> Let the success of your team be your noise</p>
+        <a href="#book" class="btn">Book Your Ticket</a>
+    </div>
+
+    <!-- <div class="controls">
+        <span class="vid-btn active" data-src="./img/vid1.mp4.mp4"></span>
+        <span class="vid-btn" data-src="./img/vid2.mp4.mp4"></span>
+        <span class="vid-btn" data-src="./img/vid3.mp4.mp4"></span>
+        <span class="vid-btn" data-src="./img/vid4.mp4.mp4"></span>
+        <span class="vid-btn" data-src="./img/vid5.mp4.mp4"></span>
+    </div> -->
+<div class="video-container">
+<video src="./img/ipl.mp4" id="video-slider" loop autoplay></video>
+</div>
+<!-- <audio controls  loop>
+            <source src="Neon Blade - MoonDeity ! Instrumental.mp3" type="audio/mp3">
+        </audio> -->
+</section>
+<!--book section starts-->
+<section class="book" id="book">
+    <h1 class="heading">
+        <span>B</span>
+        <span>o</span>
+        <span>o</span>
+        <span>k</span>
+        <span class="space"></span>
+        <span>n</span>
+        <span>o</span>
+        <span>w</span>
+    </h1>
+<div class="row">
+    <div class="image">
+        <img src="./img/ipl.avif" alt="">
+    </div>
+
+    <form onsubmit="return booking()" action="index.html">
+        <div class="inputBox">
+            <h3>Where To</h3>
+            <input id="place" type="text" placeholder="Stadium Name">
+        </div>
+        <div class="inputBox">
+            <h3>How Many</h3>
+            <input id="Guests" type="Number" placeholder="Number Of Members">
+        </div>
+        <div class="inputBox">
+            <h3> Your Match Date</h3>
+            <input type="date">
+        </div>
+        <!-- <div class="inputBox">
+            <h3>Leaving</h3>
+            <input type="date">
+        </div> -->
+        <input type="submit" class="btn" value="Book Now">
+    </form>
+</div>
+
+</section>
+
+<!-- package section start -->
+<section class="packages" id="packages">
+<h1 class="heading">
+    <span>P</span>
+    <span>a</span>
+    <span>c</span>
+    <span>k</span>
+    <span>a</span>
+    <span>g</span>
+    <span>e</span>
+    <span>s</span>  
+</h1>
+<div class="box-container">
+    <div class="box">
+    <img src="./img/sms.jpg" alt="" class="post1-img">
+    <div class="content">
+        <h3>Jaipur</h3>
+        <p>Sawai Mansingh Stadium in Jaipur!</p>
+        <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+        </div>
+        <div class="price">Rs.1000</span></div>
+        <a href="#book" class="btn">Book Now</a>
+    </div>
+    <div class="box">
+        <img src="./img/bankhede.jpg" alt="" class="post1-img">
+        <div class="content">
+            <h3>Mumbai</h3>
+            <p>Wankhede cricket stadium!</p>
+            <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            </div>
+            <div class="price">Rs.1000</span></div>
+            <a href="#book" class="btn">Book Now</a>
+        </div>
+        <div class="box">
+            <img src="./img/csk.jpg" alt="" class="post1-img">
+            <div class="content">
+                <h3>Chennai</h3>
+               <p>M.A. Chidambaram Stadium!</p>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                </div>
+                <div class="price">Rs.1000</span></div>
+                <a href="#book" class="btn">Book Now</a>
+            </div>
+            <div class="box">
+                <img src="./img/srh.jpg" alt="" class="post1-img">
+                <div class="content">
+                    <h3>hyderabad</h3>
+                    <p>Rajiv Gandhi International Cricket Stadium!</p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    </div>
+                    <div class="price">Rs.1000</span></div>
+                    <a href="#book" class="btn">Book Now</a>
+                </div>
+                <div class="box">
+                    <img src="./img/rcb.jpg" alt="" class="post1-img">
+                    <div class="content">
+                        <h3>Banglore</h3>
+                        <p> Chinnaswami Cricket Stadium!</p>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        </div>
+                        <div class="price">Rs.1000</span></div>
+                        <a href="#book" class="btn">Book Now</a>
+                    </div>
+                    <div class="box">
+                        <img src="./img/dc.jpg" alt="" class="post1-img">
+                        <div class="content">
+                            <h3>Delhi</h3>
+                            <p>Arun Jaitley Stadium!</p>
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            </div>
+                            <div class="price">Rs.1000</span></div>
+                            <a href="#book" class="btn">Book Now</a>
+                        </div>
+                        <div class="box">
+                            <img src="./img/mohali.jpg" alt="" class="post1-img">
+                            <div class="content">
+                                <h3>Punjab</h3>
+                                <p>Mohali Cricket Stadium</p>
+                                <div class="stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                </div>
+                                <div class="price">Rs.1000</span></div>
+                                <a href="#book" class="btn">Book Now</a>
+                            </div>
+                            <div class="box">
+                                <img src="./img/lsg.avif" alt="" class="post1-img">
+                                <div class="content">
+                                    <h3> lakhknow </h3>
+                                    <p>Shri Atal Bihari Vajpayee Ekana Cricket Stadium</p>
+                                    <div class="stars">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    </div>
+                                    <div class="price">Rs.1000</span></div>
+                                    <a href="#book" class="btn">Book Now</a>
+                                </div>
+                               
+    
+</div>
+
+
+</section>
+<!--services section starts-->
+
+<!-- <section class="Services" id="Services">
+    <h1 class="heading">
+        <span>S</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+<div class="box-container" >
+    <div class="box">
+       <i class="fa fa-bed"></i>
+        <h3>Taj Hotel</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut impedit expedita fuga magni, accusantium error veniam unde qui aliquid perspiciatis, illo, est voluptatibus quae quod facilis nostrum aspernatur a reiciendis!</p>
+    </div>
+    <div class="box">
+        <i class="fa fa-cutlery"></i>
+        <h3>Food And Drink</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut impedit expedita fuga magni, accusantium error veniam unde qui aliquid perspiciatis, illo, est voluptatibus quae quod facilis nostrum aspernatur a reiciendis!</p>
+    </div>
+    <div class="box">
+        <i class="fa fa-bullhorn"></i>
+        <h3>Safty Guide</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut impedit expedita fuga magni, accusantium error veniam unde qui aliquid perspiciatis, illo, est voluptatibus quae quod facilis nostrum aspernatur a reiciendis!</p>
+    </div>
+    <div class="box">
+        <i class="fa fa-globe"></i>
+        <h3>Around The World</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut impedit expedita fuga magni, accusantium error veniam unde qui aliquid perspiciatis, illo, est voluptatibus quae quod facilis nostrum aspernatur a reiciendis!</p>
+    </div>
+    <div class="box">
+        <i class="fa fa-plane"></i>
+        <h3>Fastest Travel</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut impedit expedita fuga magni, accusantium error veniam unde qui aliquid perspiciatis, illo, est voluptatibus quae quod facilis nostrum aspernatur a reiciendis!</p>
+    </div>
+    <div class="box">
+        <i class="fa fa-male"></i>
+        <h3>Adventure</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut impedit expedita fuga magni, accusantium error veniam unde qui aliquid perspiciatis, illo, est voluptatibus quae quod facilis nostrum aspernatur a reiciendis!</p>
+    </div>
+</div>
+
+</section> -->
+
+<section class="gallery" id="gallery">
+    <h1 class="heading">
+        <span>G</span>
+        <span>e</span>
+        <span>l</span>
+        <span>l</span>
+        <span>e</span>
+        <span>r</span>
+        <span>y</span>
+    </h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="./img/dhoni.webp" alt="">
+            <div class="content">
+                <h3>Best Finisher</h3>
+                <p>MS Dhoni played 236 IPL matches and scored 5028 runs in 209 Innings.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./img/virat.avif" alt="">
+            <div class="content">
+                <h3>King Kohli</h3>
+                <p>He has also slammed 5 centuries and 47 half-centuries, with his highest IPL score being 113 runs. </p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./img/raina.jpg" alt="">
+            <div class="content">
+                <h3>Mr.IPL</h3>
+                <p>Raina has played 205 IPL matches, scoring 5528 runs at an average of 32.52. He has a century and 39 fifties to his account.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./img/ab de.jpg" alt="">
+            <div class="content">
+                <h3>Power Striker</h3>
+                <p>AB de Villiers has played 184 matches to date in his IPL career and has scored 5162 runs, with an average of 39.70.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./img/liam.webp" alt="">
+            <div class="content">
+                <h3>Moster Hitter</h3>
+                <p>Liam Livingstone is an explosive top-order batter for the Punjab Kings in the IPL.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./img/rohit.jpg" alt="">
+            <div class="content">
+                <h3>Best Captain</h3>
+                <p>Rohit Sharma's Leadership Mumbai Indians won 5 Indian Premier League Season titles in 2013, 2015, 2017, 2019, and 2020.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./img/gyle.webp" alt="">
+            <div class="content">
+                <h3>Universal Boss</h3>
+                <p>He has also slammed 6 centuries and 31 half-centuries, with his highest IPL score being 175* runs. Chris Gayle has hit 405 fours and 357 sixes in his IPL career.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./img/maxwell.avif" alt="">
+            <div class="content">
+                <h3>Maxi</h3>
+                <p>Glenn Maxwell has played 115 matches to date in his IPL career and has scored 2495 runs, with an average of 26.26.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--review section-->
+<section class="Review" id="Review">
+    <h1 class="heading">
+        <span>R</span>
+        <span>e</span>
+        <span>v</span>
+        <span>i</span>
+        <span>e</span>
+        <span>w</span>
+    </h1>
+
+    <div class="swiper mySwiper review-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="./img/png1.png" alt="">
+                    <h3>Raj</h3>
+                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta inventore aut quisquam exercitationem saepe molestias minus, numquam eius, nihil eos, vero itaque beatae nemo facere. Eius unde quibusdam corporis ipsa!</p>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="./img/png6.png" alt="">
+                    <h3>Raj</h3>
+                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta inventore aut quisquam exercitationem saepe molestias minus, numquam eius, nihil eos, vero itaque beatae nemo facere. Eius unde quibusdam corporis ipsa!</p>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="./img/png2.png" alt="">
+                    <h3>Ravi</h3>
+                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta inventore aut quisquam exercitationem saepe molestias minus, numquam eius, nihil eos, vero itaque beatae nemo facere. Eius unde quibusdam corporis ipsa!</p>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="./img/png3.png" alt="">
+                    <h3>Raveena</h3>
+                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta inventore aut quisquam exercitationem saepe molestias minus, numquam eius, nihil eos, vero itaque beatae nemo facere. Eius unde quibusdam corporis ipsa!</p>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="./img/png4.png" alt="">
+                    <h3>Sheela</h3>
+                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta inventore aut quisquam exercitationem saepe molestias minus, numquam eius, nihil eos, vero itaque beatae nemo facere. Eius unde quibusdam corporis ipsa!</p>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--contact form-->
+<section class="contact" id="contact">
+    <h1 class="heading">
+        <span>E</span>
+        <span>X</span>
+        <span>P</span>
+        <span>E</span>
+        <span>R</span>
+        <span>I</span>
+        <span>E</span>
+        <span>N</span>
+        <span>C</span>
+        <span>E</span>
+    </h1>
+    <div class="row">
+        <div class="image">
+            <img src="./img/rating.jpeg" alt="">
+        </div>
+        <form onsubmit="return contact()" action="">
+            <div class="inputBox">
+                <input id="name" type="text" placeholder="name">
+                <input id="emails" type="email" placeholder="email">
+            </div>
+            <div class="inputBox">
+                <input id="number" type="number" placeholder="Rating">
+                <input id="subject" type="email" placeholder="subject">
+            </div>
+            <textarea placeholder="Share Your Expirence" name="" id="" cols="30" rows="10"></textarea>
+            <input type="submit" class="btn" value="send message">
+        </form>
+    </div>
+</section>
+
+<!--Footer Section-->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>About Us</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium expedita quasi quod quis delectus consectetur nihil hic labore! Repudiandae, commodi.</p>
+        <img src="./img/tata.webp" width="200px">
+        </div>
+        <div class="box">
+            <h3>branch locations</h3>
+            <a href="#">Rajasthan</a>
+            <a href="#">Banglore</a>
+            <a href="#">Goa</a>
+            <a href="#">Mumbai</a>
+            <a href="#">Hyderabad</a>
+            <a href="#">Delhi</a>
+        </div>
+        <div class="box">
+            <h3>Quick Link</h3>
+            <a href="#">Home</a>
+            <a href="#">Book</a>
+            <a href="#">Packages</a>
+            <a href="#">Review</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="box">
+            <h3>Follow Us</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">Linkedin</a>
+        </div>
+    </div>
+
+    <h1 class="credit">Created By <span>Nitin Kumar</span>&#128526</h1>
+</section>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script src="app.js">
+
+    </script>
+</body>
+</html>
